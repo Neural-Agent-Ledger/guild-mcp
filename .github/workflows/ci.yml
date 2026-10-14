@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install "ruff==0.15.12"
+      - run: ruff check guild_mcp/
+      - run: ruff format --check guild_mcp/
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install poetry==2.1.3
+      - run: poetry config virtualenvs.create false
+      - run: poetry install --with dev
+      - run: >-
+          poetry run python -m pytest
+          tests/test_auth.py tests/test_spotlight.py tests/test_client_guards.py
+          tests/test_a_local_session_can_reach_the_backend.py
+          tests/test_the_instructions_name_only_tools_the_agent_has.py
+          -v --tb=short
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: the package installs and the server lists its tools
+        run: |
+          uv build
+          uvx --from dist/*.whl python -c "import asyncio, guild_mcp.server as s; t = asyncio.run(s.mcp.get_tools()); assert len(t) == 59, len(t); print(len(t), 'tools')"

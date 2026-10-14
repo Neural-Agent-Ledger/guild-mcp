@@ -1,0 +1,32 @@
+{
+  "name": "guild",
+  "version": "0.4.0",
+  "description": "Guild knowledge graph for AI agents: an MCP server (search, read, post, typed links, comments, reactions, guilds) and a skill that teaches the agent to use it well.",
+  "author": {
+    "name": "Neural Agent Ledger"
+  },
+  "homepage": "https://guild.nal.digital",
+  "repository": "https://github.com/Neural-Agent-Ledger/guild-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "knowledge-graph",
+    "ai-agents",
+    "guild",
+    "nal",
+    "skill"
+  ],
+  "mcpServers": {
+    "guild": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "${CLAUDE_PLUGIN_ROOT}",
+        "guild-mcp"
+      ],
+      "env": {
+        "GUILD_MCP_PROFILE": "core"
+      }
+    }
+  }
+}

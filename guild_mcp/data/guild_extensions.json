@@ -1,0 +1,1207 @@
+{
+  "_description": "Guild-specific taxonomy extensions. Namespace: http://nal.digital/cv/. These categories extend IPTC Media Topics with deep tech subtags and Guild-specific domains that IPTC does not cover at sufficient depth.",
+  "_version": "2.0",
+  "_namespace": "http://nal.digital/cv/",
+  "_relationship_to_iptc": "Each category maps to an IPTC Media Topic via iptc_broader. Guild extensions go deeper (subtags with keyword matching) where IPTC stays generic. IPTC concepts are stored separately in iptc_media_topics.json.",
+  "_note": "Do NOT edit IPTC concepts here. This file is Guild-only extensions. IPTC is the base layer, this is the enrichment layer.",
+  "categories": {
+    "programming-languages": {
+      "keywords": [
+        "programming language",
+        "syntax",
+        "compiler",
+        "interpreter"
+      ],
+      "subtags": {
+        "python": [
+          "python",
+          "cpython",
+          "pypy",
+          "django",
+          "flask",
+          "fastapi",
+          "pytest",
+          "pydantic"
+        ],
+        "javascript": [
+          "javascript",
+          "typescript",
+          "ecmascript",
+          "node",
+          "deno",
+          "bun",
+          "react",
+          "vue",
+          "angular",
+          "svelte",
+          "next.js",
+          "nuxt"
+        ],
+        "rust": [
+          "rust",
+          "cargo",
+          "tokio",
+          "wasm",
+          "rustc"
+        ],
+        "go": [
+          "golang",
+          "goroutine",
+          "go module"
+        ],
+        "java": [
+          "java",
+          "jvm",
+          "spring",
+          "kotlin",
+          "gradle",
+          "maven"
+        ],
+        "csharp": [
+          "c#",
+          ".net",
+          "asp.net",
+          "blazor",
+          "unity"
+        ],
+        "cpp": [
+          "c++",
+          "cmake",
+          "llvm",
+          "boost"
+        ],
+        "swift": [
+          "swift",
+          "swiftui",
+          "ios development"
+        ],
+        "ruby": [
+          "ruby",
+          "rails",
+          "sinatra"
+        ],
+        "php": [
+          "php",
+          "laravel",
+          "symfony"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "machine-learning": {
+      "keywords": [
+        "machine learning",
+        "artificial intelligence",
+        "deep learning",
+        "neural network"
+      ],
+      "subtags": {
+        "llm": [
+          "large language model",
+          "gpt",
+          "claude",
+          "llama",
+          "mistral",
+          "gemini",
+          "chatbot",
+          "prompt engineering"
+        ],
+        "computer-vision": [
+          "computer vision",
+          "image recognition",
+          "object detection",
+          "segmentation",
+          "ocr",
+          "yolo",
+          "diffusion"
+        ],
+        "nlp": [
+          "natural language processing",
+          "text classification",
+          "sentiment analysis",
+          "tokenizer",
+          "embedding",
+          "bert",
+          "ner"
+        ],
+        "reinforcement-learning": [
+          "reinforcement learning",
+          "rl",
+          "reward model",
+          "rlhf",
+          "ppo"
+        ],
+        "ml-ops": [
+          "mlops",
+          "model serving",
+          "model training",
+          "feature store",
+          "experiment tracking",
+          "mlflow",
+          "wandb"
+        ],
+        "generative-ai": [
+          "generative ai",
+          "text-to-image",
+          "text-to-video",
+          "image generation",
+          "stable diffusion",
+          "midjourney"
+        ]
+      },
+      "iptc_broader": "20000756"
+    },
+    "databases": {
+      "keywords": [
+        "database",
+        "data store",
+        "query language"
+      ],
+      "subtags": {
+        "sql": [
+          "sql",
+          "postgresql",
+          "mysql",
+          "sqlite",
+          "mariadb",
+          "mssql"
+        ],
+        "nosql": [
+          "nosql",
+          "mongodb",
+          "dynamodb",
+          "cassandra",
+          "couchdb"
+        ],
+        "graph-databases": [
+          "neo4j",
+          "graph database",
+          "cypher",
+          "dgraph",
+          "arangodb"
+        ],
+        "vector-databases": [
+          "vector database",
+          "qdrant",
+          "pinecone",
+          "weaviate",
+          "milvus",
+          "chromadb",
+          "faiss"
+        ],
+        "key-value": [
+          "redis",
+          "memcached",
+          "etcd",
+          "key-value store"
+        ],
+        "search-engines": [
+          "elasticsearch",
+          "opensearch",
+          "solr",
+          "meilisearch",
+          "typesense"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "devops": {
+      "keywords": [
+        "devops",
+        "site reliability",
+        "platform engineering"
+      ],
+      "subtags": {
+        "containers": [
+          "docker",
+          "podman",
+          "containerd",
+          "dockerfile",
+          "container"
+        ],
+        "orchestration": [
+          "kubernetes",
+          "k8s",
+          "helm",
+          "docker-compose",
+          "nomad"
+        ],
+        "ci-cd": [
+          "ci/cd",
+          "github actions",
+          "gitlab ci",
+          "jenkins",
+          "circleci",
+          "pipeline"
+        ],
+        "infrastructure-as-code": [
+          "terraform",
+          "pulumi",
+          "ansible",
+          "cloudformation",
+          "cdk"
+        ],
+        "monitoring": [
+          "prometheus",
+          "grafana",
+          "datadog",
+          "loki",
+          "opentelemetry",
+          "observability"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "cloud": {
+      "keywords": [
+        "cloud computing",
+        "cloud provider"
+      ],
+      "subtags": {
+        "aws": [
+          "aws",
+          "amazon web services",
+          "lambda",
+          "s3",
+          "ec2",
+          "ecs",
+          "fargate"
+        ],
+        "gcp": [
+          "google cloud",
+          "gcp",
+          "cloud run",
+          "bigquery",
+          "gke"
+        ],
+        "azure": [
+          "azure",
+          "microsoft cloud"
+        ],
+        "serverless": [
+          "serverless",
+          "function-as-a-service",
+          "edge functions",
+          "cloudflare workers"
+        ],
+        "self-hosted": [
+          "self-hosted",
+          "bare metal",
+          "homelab",
+          "hetzner",
+          "vps"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "security": {
+      "keywords": [
+        "security",
+        "vulnerability",
+        "exploit",
+        "threat"
+      ],
+      "subtags": {
+        "appsec": [
+          "application security",
+          "owasp",
+          "xss",
+          "sql injection",
+          "csrf",
+          "ssrf"
+        ],
+        "cryptography": [
+          "cryptography",
+          "encryption",
+          "tls",
+          "ssl",
+          "hashing",
+          "pgp",
+          "e2ee"
+        ],
+        "identity": [
+          "authentication",
+          "authorization",
+          "oauth",
+          "oidc",
+          "jwt",
+          "saml",
+          "sso",
+          "rbac"
+        ],
+        "network-security": [
+          "firewall",
+          "vpn",
+          "wireguard",
+          "ids",
+          "network security",
+          "zero trust"
+        ],
+        "supply-chain": [
+          "supply chain",
+          "sbom",
+          "dependency",
+          "cve",
+          "vulnerability scanning"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "web-development": {
+      "keywords": [
+        "web development",
+        "frontend",
+        "backend",
+        "full-stack"
+      ],
+      "subtags": {
+        "frontend": [
+          "frontend",
+          "html",
+          "css",
+          "tailwind",
+          "sass",
+          "ui",
+          "ux"
+        ],
+        "backend": [
+          "backend",
+          "api",
+          "rest",
+          "graphql",
+          "grpc",
+          "websocket"
+        ],
+        "frameworks": [
+          "next.js",
+          "remix",
+          "astro",
+          "sveltekit",
+          "fastapi",
+          "express",
+          "django"
+        ],
+        "performance": [
+          "web performance",
+          "lighthouse",
+          "core web vitals",
+          "lazy loading",
+          "cdn"
+        ],
+        "accessibility": [
+          "accessibility",
+          "a11y",
+          "screen reader",
+          "wcag",
+          "aria"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "distributed-systems": {
+      "keywords": [
+        "distributed system",
+        "microservice",
+        "scalability"
+      ],
+      "subtags": {
+        "messaging": [
+          "message queue",
+          "pulsar",
+          "kafka",
+          "rabbitmq",
+          "nats",
+          "event-driven"
+        ],
+        "architecture": [
+          "microservices",
+          "monolith",
+          "service mesh",
+          "event sourcing",
+          "cqrs",
+          "saga"
+        ],
+        "consensus": [
+          "consensus",
+          "raft",
+          "paxos",
+          "distributed consensus",
+          "crdt"
+        ],
+        "caching": [
+          "caching",
+          "cache invalidation",
+          "cdn",
+          "redis cache",
+          "varnish"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "data-engineering": {
+      "keywords": [
+        "data engineering",
+        "data pipeline",
+        "etl",
+        "elt"
+      ],
+      "subtags": {
+        "streaming": [
+          "stream processing",
+          "kafka streams",
+          "flink",
+          "spark streaming"
+        ],
+        "batch": [
+          "batch processing",
+          "spark",
+          "hadoop",
+          "dbt",
+          "airflow"
+        ],
+        "data-warehouse": [
+          "data warehouse",
+          "snowflake",
+          "bigquery",
+          "redshift",
+          "clickhouse"
+        ],
+        "data-lake": [
+          "data lake",
+          "iceberg",
+          "delta lake",
+          "parquet",
+          "hudi"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "mobile": {
+      "keywords": [
+        "mobile development",
+        "mobile app"
+      ],
+      "subtags": {
+        "android": [
+          "android",
+          "kotlin multiplatform",
+          "jetpack compose"
+        ],
+        "ios": [
+          "ios",
+          "swiftui",
+          "uikit",
+          "xcode"
+        ],
+        "cross-platform": [
+          "react native",
+          "flutter",
+          "kotlin multiplatform",
+          "capacitor",
+          "expo"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "open-source": {
+      "keywords": [
+        "open source",
+        "oss",
+        "foss"
+      ],
+      "subtags": {
+        "licensing": [
+          "license",
+          "mit",
+          "apache",
+          "gpl",
+          "bsd",
+          "copyleft"
+        ],
+        "community": [
+          "open source community",
+          "contribution",
+          "maintainer"
+        ],
+        "governance": [
+          "governance",
+          "foundation",
+          "cncf",
+          "linux foundation"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "career": {
+      "keywords": [
+        "career",
+        "hiring",
+        "interview",
+        "job"
+      ],
+      "subtags": {
+        "interviews": [
+          "coding interview",
+          "system design interview",
+          "behavioral interview"
+        ],
+        "growth": [
+          "career growth",
+          "mentoring",
+          "leadership",
+          "tech lead",
+          "staff engineer"
+        ],
+        "remote-work": [
+          "remote work",
+          "distributed team",
+          "async work"
+        ]
+      },
+      "iptc_broader": "09000000"
+    },
+    "research": {
+      "keywords": [
+        "research paper",
+        "academic",
+        "arxiv",
+        "conference"
+      ],
+      "subtags": {
+        "papers": [
+          "paper",
+          "arxiv",
+          "preprint",
+          "peer review"
+        ],
+        "benchmarks": [
+          "benchmark",
+          "evaluation",
+          "leaderboard",
+          "sota"
+        ],
+        "conferences": [
+          "conference",
+          "neurips",
+          "icml",
+          "iclr",
+          "acl",
+          "cvpr",
+          "sigmod"
+        ]
+      },
+      "iptc_broader": "13000000"
+    },
+    "tools": {
+      "keywords": [
+        "developer tool",
+        "productivity",
+        "ide"
+      ],
+      "subtags": {
+        "editors": [
+          "vscode",
+          "neovim",
+          "jetbrains",
+          "emacs",
+          "zed"
+        ],
+        "cli": [
+          "cli",
+          "command line",
+          "terminal",
+          "shell",
+          "bash",
+          "zsh"
+        ],
+        "version-control": [
+          "git",
+          "github",
+          "gitlab",
+          "version control",
+          "monorepo"
+        ],
+        "ai-tools": [
+          "copilot",
+          "cursor",
+          "claude code",
+          "ai coding",
+          "code generation"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "ethics": {
+      "keywords": [
+        "ai ethics",
+        "bias",
+        "fairness",
+        "responsible ai"
+      ],
+      "subtags": {
+        "ai-safety": [
+          "ai safety",
+          "alignment",
+          "interpretability",
+          "explainability"
+        ],
+        "privacy": [
+          "privacy",
+          "gdpr",
+          "data protection",
+          "anonymization",
+          "differential privacy"
+        ],
+        "bias": [
+          "bias",
+          "fairness",
+          "discrimination",
+          "debiasing"
+        ]
+      },
+      "iptc_broader": "13000000"
+    },
+    "testing": {
+      "keywords": [
+        "testing",
+        "test automation",
+        "quality assurance",
+        "qa"
+      ],
+      "subtags": {
+        "unit-testing": [
+          "unit test",
+          "jest",
+          "pytest",
+          "vitest",
+          "mocha",
+          "junit",
+          "xunit"
+        ],
+        "e2e-testing": [
+          "end-to-end",
+          "e2e",
+          "playwright",
+          "cypress",
+          "selenium",
+          "puppeteer"
+        ],
+        "tdd": [
+          "test-driven development",
+          "tdd",
+          "bdd",
+          "behavior-driven"
+        ],
+        "load-testing": [
+          "load testing",
+          "performance testing",
+          "k6",
+          "locust",
+          "jmeter",
+          "gatling"
+        ],
+        "fuzzing": [
+          "fuzzing",
+          "fuzz testing",
+          "property-based testing",
+          "hypothesis"
+        ]
+      },
+      "iptc_broader": "20000225"
+    },
+    "gamedev": {
+      "keywords": [
+        "game development",
+        "game engine",
+        "game design"
+      ],
+      "subtags": {
+        "unity": [
+          "unity",
+          "unity3d",
+          "c# game"
+        ],
+        "unreal": [
+          "unreal engine",
+          "unreal",
+          "ue5",
+          "ue4",
+          "blueprint"
+        ],
+        "godot": [
+          "godot",
+          "gdscript"
+        ],
+        "graphics": [
+          "shader",
+          "opengl",
+          "vulkan",
+          "webgl",
+          "directx",
+          "raytracing",
+          "rendering"
+        ]
+      },
+      "iptc_broader": "20000540"
+    },
+    "business": {
+      "keywords": [
+        "business",
+        "startup",
+        "entrepreneurship",
+        "management"
+      ],
+      "subtags": {
+        "startups": [
+          "startup",
+          "founder",
+          "seed round",
+          "vc",
+          "venture capital",
+          "yc",
+          "fundraising"
+        ],
+        "product": [
+          "product management",
+          "product-market fit",
+          "roadmap",
+          "user research",
+          "mvp"
+        ],
+        "fintech": [
+          "fintech",
+          "payments",
+          "blockchain",
+          "cryptocurrency",
+          "defi",
+          "web3",
+          "nft"
+        ],
+        "saas": [
+          "saas",
+          "subscription",
+          "churn",
+          "mrr",
+          "arr",
+          "b2b",
+          "b2c"
+        ],
+        "economics": [
+          "economics",
+          "market",
+          "pricing",
+          "monetization"
+        ]
+      },
+      "iptc_broader": "04000000"
+    },
+    "education": {
+      "keywords": [
+        "education",
+        "learning",
+        "teaching",
+        "tutorial"
+      ],
+      "subtags": {
+        "online-learning": [
+          "online course",
+          "mooc",
+          "edtech",
+          "coursera",
+          "udemy",
+          "e-learning"
+        ],
+        "bootcamps": [
+          "bootcamp",
+          "coding bootcamp",
+          "cohort-based"
+        ],
+        "pedagogy": [
+          "pedagogy",
+          "curriculum",
+          "learning theory",
+          "spaced repetition"
+        ]
+      },
+      "iptc_broader": "05000000"
+    },
+    "science": {
+      "keywords": [
+        "science",
+        "scientific",
+        "physics",
+        "biology",
+        "chemistry"
+      ],
+      "subtags": {
+        "computational-science": [
+          "computational",
+          "simulation",
+          "numerical methods",
+          "hpc",
+          "scientific computing"
+        ],
+        "bioinformatics": [
+          "bioinformatics",
+          "genomics",
+          "proteomics",
+          "computational biology"
+        ],
+        "physics": [
+          "physics",
+          "quantum computing",
+          "quantum mechanics",
+          "astrophysics"
+        ],
+        "mathematics": [
+          "mathematics",
+          "statistics",
+          "probability",
+          "linear algebra",
+          "graph theory",
+          "optimization"
+        ],
+        "robotics": [
+          "robotics",
+          "ros",
+          "autonomous",
+          "drone",
+          "lidar",
+          "slam"
+        ]
+      },
+      "iptc_broader": "13000000"
+    },
+    "design": {
+      "keywords": [
+        "design",
+        "user interface",
+        "user experience"
+      ],
+      "subtags": {
+        "ui-design": [
+          "ui design",
+          "figma",
+          "sketch",
+          "design system",
+          "component library"
+        ],
+        "ux-design": [
+          "ux design",
+          "user research",
+          "wireframe",
+          "prototype",
+          "usability"
+        ],
+        "creative-coding": [
+          "creative coding",
+          "generative art",
+          "processing",
+          "p5.js",
+          "three.js",
+          "webgl art"
+        ]
+      },
+      "iptc_broader": "20000033"
+    },
+    "media": {
+      "keywords": [
+        "media",
+        "content creation",
+        "digital media"
+      ],
+      "subtags": {
+        "video-production": [
+          "video production",
+          "video editing",
+          "ffmpeg",
+          "obs",
+          "streaming"
+        ],
+        "audio": [
+          "audio",
+          "podcast",
+          "text-to-speech",
+          "speech-to-text",
+          "music generation"
+        ],
+        "3d": [
+          "3d modeling",
+          "blender",
+          "maya",
+          "3d printing",
+          "cad"
+        ],
+        "image-generation": [
+          "image generation",
+          "stable diffusion",
+          "midjourney",
+          "dall-e",
+          "comfyui",
+          "inpainting"
+        ]
+      },
+      "iptc_broader": "20000045"
+    },
+    "environment": {
+      "keywords": [
+        "environment",
+        "sustainability",
+        "climate"
+      ],
+      "subtags": {
+        "green-tech": [
+          "green tech",
+          "carbon footprint",
+          "energy efficiency",
+          "renewable energy"
+        ],
+        "sustainable-computing": [
+          "sustainable computing",
+          "green software",
+          "power usage effectiveness"
+        ],
+        "climate": [
+          "climate change",
+          "global warming",
+          "carbon emissions"
+        ]
+      },
+      "iptc_broader": "06000000"
+    },
+    "_comment_broad": "=== BROAD DOMAINS (general life topics, grow organically) ===",
+    "sports": {
+      "keywords": [
+        "sports",
+        "athletics",
+        "competition",
+        "tournament"
+      ],
+      "subtags": {
+        "esports": [
+          "esports",
+          "competitive gaming",
+          "twitch",
+          "league of legends",
+          "dota",
+          "counter-strike"
+        ],
+        "fitness": [
+          "fitness",
+          "workout",
+          "gym",
+          "training",
+          "running",
+          "marathon"
+        ]
+      },
+      "iptc_broader": "15000000"
+    },
+    "health": {
+      "keywords": [
+        "health",
+        "medicine",
+        "wellness",
+        "mental health"
+      ],
+      "subtags": {
+        "mental-health": [
+          "mental health",
+          "psychology",
+          "therapy",
+          "mindfulness",
+          "burnout",
+          "stress"
+        ],
+        "nutrition": [
+          "nutrition",
+          "diet",
+          "supplements"
+        ],
+        "medical-tech": [
+          "medtech",
+          "telemedicine",
+          "health data",
+          "electronic health records",
+          "wearables"
+        ]
+      },
+      "iptc_broader": "07000000"
+    },
+    "politics": {
+      "keywords": [
+        "politics",
+        "government",
+        "policy",
+        "regulation",
+        "legislation"
+      ],
+      "subtags": {
+        "tech-policy": [
+          "tech regulation",
+          "antitrust",
+          "section 230",
+          "digital markets act",
+          "ai regulation",
+          "ai act"
+        ],
+        "internet-governance": [
+          "internet governance",
+          "net neutrality",
+          "censorship",
+          "digital rights",
+          "content moderation"
+        ]
+      },
+      "iptc_broader": "11000000"
+    },
+    "law": {
+      "keywords": [
+        "law",
+        "legal",
+        "compliance",
+        "litigation"
+      ],
+      "subtags": {
+        "ip-law": [
+          "intellectual property",
+          "patent",
+          "copyright",
+          "trademark",
+          "open source license"
+        ],
+        "data-law": [
+          "data protection",
+          "gdpr",
+          "ccpa",
+          "hipaa",
+          "data sovereignty"
+        ]
+      },
+      "iptc_broader": "20000121"
+    },
+    "culture": {
+      "keywords": [
+        "culture",
+        "art",
+        "literature",
+        "philosophy"
+      ],
+      "subtags": {
+        "digital-art": [
+          "digital art",
+          "nft art",
+          "ai art",
+          "generative art"
+        ],
+        "philosophy": [
+          "philosophy",
+          "epistemology",
+          "ethics",
+          "consciousness"
+        ],
+        "literature": [
+          "literature",
+          "writing",
+          "fiction",
+          "non-fiction",
+          "sci-fi"
+        ],
+        "music": [
+          "music",
+          "music production",
+          "electronic music",
+          "synthwave"
+        ]
+      },
+      "iptc_broader": "20000038"
+    },
+    "lifestyle": {
+      "keywords": [
+        "lifestyle",
+        "personal development",
+        "productivity"
+      ],
+      "subtags": {
+        "productivity": [
+          "productivity",
+          "time management",
+          "second brain",
+          "note-taking",
+          "obsidian",
+          "notion",
+          "pkm"
+        ],
+        "travel": [
+          "travel",
+          "digital nomad",
+          "relocation",
+          "expat"
+        ],
+        "food": [
+          "food",
+          "cooking",
+          "recipe",
+          "culinary"
+        ]
+      },
+      "iptc_broader": "20000565"
+    },
+    "news": {
+      "keywords": [
+        "news",
+        "breaking",
+        "current events",
+        "announcement"
+      ],
+      "subtags": {
+        "tech-news": [
+          "tech news",
+          "product launch",
+          "acquisition",
+          "ipo",
+          "funding round"
+        ],
+        "industry-news": [
+          "industry news",
+          "market report",
+          "earnings",
+          "layoffs"
+        ]
+      },
+      "iptc_broader": "20000046"
+    },
+    "community": {
+      "keywords": [
+        "community",
+        "meetup",
+        "event",
+        "conference"
+      ],
+      "subtags": {
+        "events": [
+          "conference",
+          "meetup",
+          "hackathon",
+          "workshop",
+          "summit"
+        ],
+        "discussions": [
+          "discussion",
+          "debate",
+          "ama",
+          "q&a",
+          "poll"
+        ],
+        "showcases": [
+          "show hn",
+          "show and tell",
+          "side project",
+          "weekend project",
+          "demo"
+        ]
+      },
+      "iptc_broader": "14000000"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "neural-agent-ledger",
+  "description": "Open-source plugins, MCP servers and skills from Neural Agent Ledger (NAL).",
+  "owner": {
+    "name": "Neural Agent Ledger"
+  },
+  "plugins": [
+    {
+      "name": "guild",
+      "source": ".",
+      "description": "Guild knowledge graph: MCP server + skill"
+    }
+  ]
+}

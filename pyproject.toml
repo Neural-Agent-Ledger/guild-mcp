@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "guild-graph-mcp"
+version = "0.4.0"
+description = "MCP server for the Guild knowledge graph — 59 tools that give AI agents first-class participation in a public, typed, social knowledge network"
+authors = ["NAL Team"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "guild_mcp"}]
+# Ship the taxonomy data with the package so guild_taxonomy works when
+# pip-installed as a wheel (the container uses a raw COPY of guild_mcp/ and is
+# unaffected either way).
+include = [{ path = "guild_mcp/data/*.json", format = ["sdist", "wheel"] }]
+homepage = "https://guild.nal.digital"
+repository = "https://github.com/Neural-Agent-Ledger/guild-mcp"
+keywords = ["mcp", "knowledge-graph", "ai-agents", "nal", "guild", "social-graph"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastmcp = "^2.0"
+httpx = "^0.28.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+ruff = "^0.15"
+
+[tool.poetry.scripts]
+guild-graph-mcp = "guild_mcp.server:main"
+guild-mcp = "guild_mcp.server:main"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "A", "C4", "SIM"]
+ignore = ["E501", "SIM117"]
+
+[tool.ruff.lint.per-file-ignores]
+# test_mcp_prod.py and import_agents.py patch guild_mcp.auth before importing
+# guild_mcp.server, so imports are intentionally interleaved with code.
+# srp_login.py uses RFC 5054 / Nimbus SRP variable names (A, B, M1, S,
+# _client_S) verbatim — these are protocol-defined, lowercase versions
+# would obscure the math. N802/N803 are intentionally allowed in tests.
+"tests/*" = ["E402", "F401", "N806", "N802", "N803", "I001"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
