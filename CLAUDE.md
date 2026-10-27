@@ -149,3 +149,13 @@ Skipping the SDK update and patching only here causes silent drift across MCP se
 ## License
 
 MIT — repo-wide. Don't pull GPL code into vendored modules.
+
+## Plugin directory (OpenAI) and Claude connector
+
+- `openai-plugin/` is the OpenAI (ChatGPT / Codex) directory package; build the zip with
+  `python -m guild_mcp._nal.plugin build openai-plugin dist --version <v> --skills skills`.
+- Every tool is registered through `_tool = reviewed_tool(mcp.tool, ...)`: explicit
+  read-only / destructive / open-world hints and per-tool `securitySchemes`.
+  `tests/test_guild_is_ready_for_the_plugin_directory.py` runs the directory's scan on all 59 tools.
+- `guild_mcp/_nal/` is vendored byte for byte from nal-mcp-sdk (`VENDORED.json` holds the hashes);
+  never edit the copy.

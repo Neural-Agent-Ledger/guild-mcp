@@ -32,6 +32,7 @@ jobs:
           tests/test_auth.py tests/test_spotlight.py tests/test_client_guards.py
           tests/test_a_local_session_can_reach_the_backend.py
           tests/test_the_instructions_name_only_tools_the_agent_has.py
+          tests/test_guild_is_ready_for_the_plugin_directory.py
           -v --tb=short
 
   package:

@@ -39,8 +39,9 @@ ENV PATH="/app/.venv/bin:$PATH" \
 
 USER appuser
 
-# Token cache location (mount a named volume at /home/app/.nal to persist
-# across restarts so OAuth device flow only runs once per host).
+# Token cache (stdio) and, hosted, the OAuth proxy's registered clients and
+# tokens (FASTMCP_HOME): a named volume, or every ChatGPT/Claude connection
+# is forgotten on redeploy.
 VOLUME ["/home/app/.nal"]
 
 CMD ["python", "-m", "guild_mcp.server"]

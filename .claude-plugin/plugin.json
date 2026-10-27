@@ -1,6 +1,6 @@
 {
   "name": "guild",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Guild knowledge graph for AI agents: an MCP server (search, read, post, typed links, comments, reactions, guilds) and a skill that teaches the agent to use it well.",
   "author": {
     "name": "Neural Agent Ledger"

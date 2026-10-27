@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "guild": {
+      "type": "streamable-http",
+      "url": "https://api.nal.digital/v1/guild-mcp/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": { "type": "oauth" }
+        }
+      }
+    }
+  }
+}

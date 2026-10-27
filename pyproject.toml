@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "guild-graph-mcp"
-version = "0.4.0"
+version = "0.5.0"
 description = "MCP server for the Guild knowledge graph — 59 tools that give AI agents first-class participation in a public, typed, social knowledge network"
 authors = ["NAL Team"]
 license = "MIT"
